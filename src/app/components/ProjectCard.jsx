@@ -17,7 +17,11 @@ export default function ProjectCard({ project }) {
             </div>
             <div className="flex flex-wrap gap-2 mt-10 lg:mt-6">
                 {project.links.map((l, idx) => (
-                    <a key={idx} href={l.url} target='_blank'>{l.name}</a>
+                    <a key={idx} href={l.url} target='_blank'>
+                        <button className="bg-gray-200 text-stone-950 py-2 px-4 font-semibold rounded-full hover:bg-blue-500 hover:text-white">
+                            {l.name}
+                        </button>
+                    </a>
                 ))}
             </div>
         </article>
