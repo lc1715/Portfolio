@@ -1,25 +1,25 @@
 const projectData = [
     {
         title: 'BookMarker',
-        imageUrl: '/public/self',
+        imageUrl: '/bookmarker.png',
         imageAlt: 'project screenshot',
         description: 'project description',
-        techUsed: ['React', 'Express'],
+        techUsed: ['React', 'Express', 'Node.js', 'Material UI', 'PostgreSQL'],
         links: [
+            { name: 'Demo', url: 'https://bookmarker-tbif.onrender.com/' },
             { name: 'Frontend Code', url: 'https://github.com/lc1715/BookMarker-Frontend' },
-            { name: 'Backend Code', url: 'https://github.com/lc1715/BookMarker-Backend' },
-            { name: 'Demo', url: 'https://bookmarker-tbif.onrender.com/' }
+            { name: 'Backend Code', url: 'https://github.com/lc1715/BookMarker-Backend' }
         ]
     },
     {
         title: 'Recipe Finder',
-        imageUrl: '/public/self',
+        imageUrl: '/recipe-finder.png',
         imageAlt: 'project screenshot',
         description: 'project description',
-        techUsed: ['React', 'Express'],
+        techUsed: ['Flask', 'Python', 'SQLAlchemy', 'PostgreSQL', 'Jinja', 'Bootstrap', 'CSS'],
         links: [
-            { name: 'Code', url: 'https://github.com/lc1715/Recipe-Finder' },
-            { name: 'Demo', url: 'https://recipe-finder-kigw.onrender.com/' }
+            { name: 'Demo', url: 'https://recipe-finder-kigw.onrender.com/' },
+            { name: 'Code', url: 'https://github.com/lc1715/Recipe-Finder' }
         ]
     },
     {
@@ -29,9 +29,9 @@ const projectData = [
         description: 'project description',
         techUsed: ['React', 'Express'],
         links: [
+            { name: 'Demo', url: 'https://bookmarker-tbif.onrender.com/' },
             { name: 'Frontend Code', url: 'https://github.com/lc1715/BookMarker-Frontend' },
-            { name: 'Backend Code', url: 'https://github.com/lc1715/BookMarker-Backend' },
-            { name: 'Demo', url: 'https://bookmarker-tbif.onrender.com/' }
+            { name: 'Backend Code', url: 'https://github.com/lc1715/BookMarker-Backend' }
         ]
     },
 ]
