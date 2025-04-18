@@ -3,6 +3,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import projectData from "./projectData";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
         <Projects projects={projectData} />
         <Contact />
       </main>
+      <Footer />
     </div>
   );
 }
