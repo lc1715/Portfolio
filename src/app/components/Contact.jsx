@@ -6,14 +6,13 @@ export default function Contact() {
     const [state, handleSubmit] = useForm("xgvabvje");
 
     return (
-        <section id="Contact" className="flex flex-col justify-center items-center pt-30">
+        <section id="Contact" className="flex flex-col justify-center items-center pt-[120px]">
             <h2 className="text-4xl md:text-5xl">Contact</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 mt-10 md:mt-12 mx-4 md:mx-6 mb-3">
                 <div className="max-w-lg px-8">
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur iusto saepe expedita! Dignissimos sit assumenda nemo suscipit ducimus, dolorum illum quasi aspernatur.
-                        Rem, quos! Harum fugiat accusamus nulla non aut!
+                        I’d love to hear from you! Whether it’s about a potential job opportunity, a collaborative project, or just to connect, please feel free to fill out the form. I’ll respond back as soon as possible. Thank you for reaching out, and I look forward to starting our conversation!
                     </p>
                 </div>
                 {state.succeeded ?
@@ -22,6 +21,7 @@ export default function Contact() {
                     </div>
                     :
                     <div className="max-w-lg p-6 rounded-lg border-2 border-gray-700">
+                        <h3 className="flex justify-center items-center font-bold text-2xl mb-4">Get In Touch!</h3>
                         <form onSubmit={handleSubmit}>
                             <label htmlFor="email" className="block">
                                 Email Address

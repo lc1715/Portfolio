@@ -1,11 +1,20 @@
 'use client'
+import { useState } from "react";
 
 export default function ProjectCard({ project }) {
+    const [hover, setHover] = useState(false);
+
     return (
-        <article className="max-w-lg p-6 rounded-lg border border-gray-700 hover:bg-gray-800">
+        <article onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
+            className="max-w-lg p-6 rounded-lg border border-gray-700 hover:bg-gray-800">
             <img src={project.imageUrl} alt={project.imageAlt} />
             <div className="mt-4">
-                <h3 className="font-bold text-xl mb-2"><span className="hover:bg-gradient-to-r from-blue-300 to-indigo-300 hover:text-transparent bg-clip-text">{project.title}</span></h3>
+                <h3 className="font-bold text-xl mb-2">
+                    <span
+                        className={hover ? "bg-gradient-to-r from-blue-300 to-indigo-300 text-transparent bg-clip-text" : ""}>
+                        {project.title}
+                    </span>
+                </h3>
                 <p className="text-base">
                     {project.description}
                 </p>
@@ -27,15 +36,3 @@ export default function ProjectCard({ project }) {
         </article>
     );
 }
-
-// <article>
-//     <h3>{project.title}</h3>
-//     <img src={project.imageUrl} alt={project.imageAlt}/>
-//     <p>{project.description}</p>
-//     {project.techUsed}
-//     <div>
-//         {project.links.map((l, idx) => (
-//             <a key={idx} href={l.url} target='_blank'>{l.name}</a>
-//         ))}
-//     </div>
-// </article>

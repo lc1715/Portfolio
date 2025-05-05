@@ -52,29 +52,29 @@ const others = [
 
 export default function Skills() {
     return (
-        <section id="Skills" className="flex flex-col justify-center items-center pt-30">
+        <section id="Skills" className="flex flex-col justify-center items-center pt-[120px]">
             <h2 className="text-4xl md:text-5xl">Tech Skills</h2>
-            <div className="max-w-[1100px] px-4 md:px-8">
-                <SkillsSection title={'Frontend'} list={frontend} />
-                <SkillsSection title={'Backend'} list={backend} />
-                <SkillsSection title={'Others'} list={others} />
+            <div className="max-w-[1100px] px-6 md:px-12">
+                <SkillsList title={'Frontend'} list={frontend} />
+                <SkillsList title={'Backend'} list={backend} />
+                <SkillsList title={'Others'} list={others} />
             </div >
         </section >
     );
 }
 
-function SkillsSection({ title, list }) {
+function SkillsList({ title, list }) {
     return (
-        <section>
+        <article>
             <h3 className="text-2xl underline font-bold mt-10">{title}</h3>
-            <div className="flex flex-wrap gap-x-10">
+            <ul className="flex flex-wrap gap-x-10">
                 {list.map((tech, idx) => (
-                    <ul key={idx} className="grid place-items-center py-5">
-                        <Image src={tech.src} alt='React' width={60} />
-                        <li className="text-lg mt-3">{tech.name}</li>
-                    </ul>
+                    <li key={idx} className="grid place-items-center py-5">
+                        <Image className="tech-icon" src={tech.src} alt={tech.name} width={60} />
+                        <div className="text-lg mt-3">{tech.name}</div>
+                    </li>
                 ))}
-            </div>
-        </section>
+            </ul>
+        </article>
     );
 }
