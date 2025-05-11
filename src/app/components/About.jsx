@@ -1,5 +1,4 @@
 'use client'
-import Image from "next/image";
 
 export default function About() {
     return (
@@ -15,12 +14,10 @@ export default function About() {
             <div className="flex flex-col justify-center items-center pt-8">
                 <h2 className="text-4xl md:text-5xl">About Me</h2>
                 <div className="flex flex-wrap justify-center gap-x-14 xl:gap-x-[100px] px-8 pt-9 md:pt-12 lg:pt-[60px]">
-                    <Image
+                    <img
                         src="/self.jpg"
                         alt="Picture of Lisa Chan"
-                        width={310}
-                        height={310}
-                        className="rounded-full object-cover w-72 h-72 md:w-[310px] md:h-[310px]"
+                        className="img-self rounded-full object-cover w-72 h-72 md:w-[310px] md:h-[310px]"
                     />
                     <div className="flex justify-center text-lg max-w-lg lg:max-w-md xl:max-w-lg pt-8 lg:pt-0 lg:px-2">
                         <p>
