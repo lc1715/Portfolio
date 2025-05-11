@@ -11,7 +11,7 @@ export default function Footer() {
                     <img className="w-7 h-7" src="/tech-skills/github.svg" alt="Github profile" />
                 </a>
             </div>
-            <p className="mt-2 text-base font-semibold">Created by <span className="bg-gradient-to-r from-blue-300 to-indigo-300 text-transparent bg-clip-text">Lisa Chan</span></p>
+            <p className="mt-2 text-base font-semibold">Created by Lisa Chan</p>
             <div className="mt-2">
                 <span className="inline-block text-xs bg-gray-700 rounded-full px-3 py-1 mr-1 mt-1">Next.js</span>
                 <span className="inline-block text-xs bg-gray-700 rounded-full px-3 py-1 mr-1 mt-1">React</span>

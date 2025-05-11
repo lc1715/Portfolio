@@ -1,17 +1,16 @@
 'use client'
 import { useState } from "react";
+import Button from "./parts/Button";
 
 export default function ProjectCard({ project }) {
     const [hover, setHover] = useState(false);
 
     return (
-        <article onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
-            className="max-w-lg p-6 rounded-lg border border-gray-700 hover:bg-gray-800">
+        <article onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className={hover ? "max-w-lg p-6 rounded-lg border border-gray-700 bg-gray-800" : "max-w-lg p-6 rounded-lg border border-gray-700"}>
             <img src={project.imageUrl} alt={project.imageAlt} />
             <div className="mt-4">
                 <h3 className="font-bold text-xl mb-2">
-                    <span
-                        className={hover ? "bg-gradient-to-r from-blue-300 to-indigo-300 text-transparent bg-clip-text" : ""}>
+                    <span className={hover ? "bg-gradient-to-r from-blue-300 to-indigo-300 text-transparent bg-clip-text" : ""}>
                         {project.title}
                     </span>
                 </h3>
@@ -27,9 +26,7 @@ export default function ProjectCard({ project }) {
             <div className="flex flex-wrap gap-2 mt-10 lg:mt-6">
                 {project.links.map((l, idx) => (
                     <a key={idx} href={l.url} target='_blank'>
-                        <button className="bg-gray-200 text-stone-950 py-2 px-4 font-semibold rounded-full hover:bg-blue-500 hover:text-white">
-                            {l.name}
-                        </button>
+                        <Button name={l.name} />
                     </a>
                 ))}
             </div>

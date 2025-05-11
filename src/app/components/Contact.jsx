@@ -1,6 +1,7 @@
 'use client'
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import Button from './parts/Button'
 
 export default function Contact() {
     const [state, handleSubmit] = useForm("xgvabvje");
@@ -16,7 +17,7 @@ export default function Contact() {
                     </p>
                 </div>
                 {state.succeeded ?
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center mt-5">
                         <p>Thanks for contacting me!</p>
                     </div>
                     :
@@ -68,7 +69,7 @@ export default function Contact() {
                                 errors={state.errors}
                             />
                             <div className="flex justify-center mt-3">
-                                <button type='submit' disabled={state.submitting} className="bg-gray-200 text-stone-950 py-2 px-4 font-semibold rounded-full hover:bg-blue-500 hover:text-white">Submit</button>
+                                <Button name={'Submit'} type='submit' disabled={state.submitting} />
                             </div>
                         </form>
                     </div>
