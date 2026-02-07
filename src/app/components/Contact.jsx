@@ -22,7 +22,7 @@ export default function Contact() {
                     </div>
                     :
                     <div className="max-w-lg p-6 rounded-lg border-2 border-gray-700">
-                        <h3 className="flex justify-center items-center font-bold text-2xl mb-4">Get In Touch!</h3>
+                        <h3 className="flex justify-center items-center font-bold text-2xl mb-4 bg-gradient-to-r from-blue-300 to-indigo-300 text-transparent bg-clip-text">Get In Touch!</h3>
                         <form onSubmit={handleSubmit}>
                             <label htmlFor="email" className="block">
                                 Email Address

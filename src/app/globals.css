@@ -30,8 +30,18 @@ html{
 }
 
 .tech-icon:hover {
-    transform: rotate(6deg);
-    /* filter: drop-shadow(0 0 6px rgb(59, 130, 246, 0.7 )) */
+    transform: rotate(10deg);
+    filter: drop-shadow(0 0 6px rgba(70, 139, 252, 0.724))
+}
+
+@keyframes randomMove {
+  0% {   transform: rotate(0deg);  }
+  50%  {   transform: rotate(10deg);  }
+  100%  {   transform: rotate(0deg);  }
+}
+
+.move {
+  animation: randomMove .6s;
 }
 
 @media screen and (max-width: 374px){

@@ -1,4 +1,5 @@
 'use client'
+import { useEffect, useState } from 'react';
 import Image from "next/image";
 import javascript from '/public/tech-skills/javascript.svg'
 import python from '/public/tech-skills/python.svg'
@@ -50,28 +51,50 @@ const others = [
     { src: jasmine, name: 'Jasmine' },
 ]
 
+const all = [...frontend, ...backend, ...others]
+
+function getRandomSkill() {
+    const idx = Math.floor(Math.random() * all.length)
+    return all[idx].name
+}
+
 export default function Skills() {
+    const [skill, setSkill] = useState(null);
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setSkill(getRandomSkill())
+        }, 2000);
+
+        return () => clearInterval(intervalId);
+    }, []);
+
     return (
         <section id="Skills" className="flex flex-col justify-center items-center pt-[120px]">
             <h2 className="text-4xl md:text-5xl">Tech Skills</h2>
             <div className="max-w-[1100px] px-6 md:px-12">
-                <SkillsList title={'Frontend'} list={frontend} />
-                <SkillsList title={'Backend'} list={backend} />
-                <SkillsList title={'Others'} list={others} />
+                <SkillsList title={'Frontend'} list={frontend} skill={skill} />
+                <SkillsList title={'Backend'} list={backend} skill={skill} />
+                <SkillsList title={'Others'} list={others} skill={skill} />
             </div >
         </section >
     );
 }
 
-function SkillsList({ title, list }) {
+function SkillsList({ title, list, skill }) {
     return (
         <article>
             <h3 className="text-2xl underline font-bold mt-10">{title}</h3>
             <ul className="flex flex-wrap gap-x-10">
                 {list.map((tech, idx) => (
-                    <li key={idx} className="grid place-items-center py-5">
-                        <Image className="tech-icon" src={tech.src} alt={tech.name} width={60} />
-                        <div className="text-lg mt-3">{tech.name}</div>
+                    < li key={idx} className="grid place-items-center py-5" >
+                        {
+                            tech.name === skill ?
+                                < Image className="tech-icon move" src={tech.src} alt={tech.name} width={60} />
+                                :
+                                < Image className="tech-icon" src={tech.src} alt={tech.name} width={60} />
+                        }
+                        < div className="text-lg mt-3">{tech.name}</div>
                     </li>
                 ))}
             </ul>
