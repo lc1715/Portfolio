@@ -17,11 +17,11 @@ export default function About() {
                     <img
                         src="/self.jpg"
                         alt="Picture of Lisa Chan"
-                        className="img-self rounded-full object-cover w-72 h-72 md:w-[274px] md:h-[274px]"
+                        className="img-self rounded-full object-cover w-72 h-72 md:w-[310px] md:h-[310px] lg:w-[274px] lg:h-[274px]"
                     />
                     <div className="flex justify-center text-lg max-w-lg lg:max-w-md xl:max-w-lg pt-8 lg:pt-0 lg:px-2">
                         <p>
-                            Hi, I’m Lisa.👋 I’ve been coding for around 4 years, and I love to combine my practical problem solving skills with my love for building reliable products. I’m currently volunteering at Hack for LA where I help the organization update and maintain their website.🌐 I enjoy working in a collaborative environment and I’m eager to learn and face new challenges. I hope to make a positive impact through my work as a developer, and I'm genuinely excited to bring my skills and knowledge to the tech world.🌍✨
+                            Hi, I’m Lisa.👋 I’ve been coding for around 4 years, and I love to combine my practical problem solving skills with my love for building reliable products. I’m currently volunteering at Hack for LA where I help the organization update and maintain their website.🌐💻 I enjoy working in a collaborative environment and I’m eager to learn and face new challenges. I hope to make a positive impact through my work as a developer, and I'm genuinely excited to bring my skills and knowledge to the tech world.🌍✨
                         </p>
                     </div>
                 </div >
