@@ -9,7 +9,6 @@ import nextjs from '/public/tech-skills/next.svg'
 import html from '/public/tech-skills/html.svg'
 import css from '/public/tech-skills/css.svg'
 import bootstrap from '/public/tech-skills/bootstrap.svg'
-import jquery from '/public/tech-skills/jquery.svg'
 import mui from '/public/tech-skills/mui.svg'
 import flask from '/public/tech-skills/flask.svg'
 import express from '/public/tech-skills/express.svg'
@@ -21,14 +20,15 @@ import jest from '/public/tech-skills/jest.svg'
 import jasmine from '/public/tech-skills/jasmine.svg'
 import sqlalchemy from '/public/tech-skills/sqlalchemy.svg'
 import tailwind from '/public/tech-skills/tailwind.svg'
+import typescript from '/public/tech-skills/typescript.svg'
 
 const frontend = [
     { src: react, name: 'React' },
     { src: nextjs, name: 'Next.js' },
     { src: html, name: 'HTML' },
     { src: css, name: 'CSS' },
-    { src: javascript, name: 'Javascript' },
-    { src: jquery, name: 'jQuery' },
+    { src: javascript, name: 'JavaScript' },
+    { src: typescript, name: 'TypeScript' },
     { src: bootstrap, name: 'Bootstrap' },
     { src: tailwind, name: 'Tailwind CSS' },
     { src: mui, name: 'Material UI' },
@@ -72,7 +72,7 @@ export default function Skills() {
     return (
         <section id="Skills" className="flex flex-col justify-center items-center pt-[120px]">
             <h2 className="text-4xl md:text-5xl">Tech Skills</h2>
-            <div className="max-w-[1100px] px-6 md:px-12">
+            <div className="max-w-[1100px] px-6 md:px-12 xl:px-9">
                 <SkillsList title={'Frontend'} list={frontend} skill={skill} />
                 <SkillsList title={'Backend'} list={backend} skill={skill} />
                 <SkillsList title={'Others'} list={others} skill={skill} />
