@@ -21,6 +21,7 @@ import jasmine from '/public/tech-skills/jasmine.svg'
 import sqlalchemy from '/public/tech-skills/sqlalchemy.svg'
 import tailwind from '/public/tech-skills/tailwind.svg'
 import typescript from '/public/tech-skills/typescript.svg'
+import drizzle_orm from '/public/tech-skills/drizzle-orm.svg'
 
 const frontend = [
     { src: react, name: 'React' },
@@ -39,6 +40,7 @@ const backend = [
     { src: express, name: 'Express' },
     { src: flask, name: 'Flask' },
     { src: python, name: 'Python' },
+    { src: drizzle_orm, name: 'Drizzle ORM' },
     { src: sqlalchemy, name: 'SQLAlchemy' },
     { src: sql, name: 'SQL' },
     { src: postgresql, name: 'PostgreSQL' },

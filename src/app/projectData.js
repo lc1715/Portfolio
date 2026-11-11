@@ -22,6 +22,17 @@ const projectData = [
             { name: 'Code', url: 'https://github.com/lc1715/Recipe-Finder' }
         ]
     },
+    {
+        title: 'Healthcare Claims',
+        imageUrl: '/healthcare-claims.png',
+        imageAlt: 'project screenshot',
+        description: `Healthcare Claims is a full-stack application that makes it easier for individuals to review and understand their healthcare claims. It includes detailed claim information, cost breakdowns, and an AI-powered tool that provides a user friendly explanation of the claim costs.`,
+        techUsed: ['Next.js', 'React', 'TypeScript', 'Drizzle ORM', 'PostgreSQL', 'Tailwind CSS', 'Gemini API'],
+        links: [
+            { name: 'Demo', url: 'https://healthcare-claims-eosin.vercel.app/' },
+            { name: 'Code', url: 'https://github.com/lc1715/healthcare-claims-app' }
+        ]
+    },
 ]
 
 export default projectData;
